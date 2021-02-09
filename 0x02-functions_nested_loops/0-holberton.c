@@ -1,27 +1,24 @@
 #include "holberton.h"
 
 /**
-* main - entry point, print "holberton".
-*
-* description: print holberton with _putchar.
-*
-* Return: Always 0.
-*
-*/
+ * main - entry point
+ *
+ * Description: Prints Holberton with _putchar
+ *
+ * Return: always 0
+ */
 
 int main(void)
 {
-char a;
+	int i = 0;
+	char c;
+	char s[] = "Holberton\n";
 
-char i;
-
-char h[] = "holberton\n";
-
-for (i = 0; i < 10; i++)
-{
-a = h[i];
-
-_putchar(a);
-}
-return (0);
+	while (i <= 9)
+	{
+		c = s[i];
+		_putchar(c);
+		i++;
+	}
+	return (0);
 }
