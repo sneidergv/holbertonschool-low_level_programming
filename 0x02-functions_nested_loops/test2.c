@@ -4,7 +4,7 @@ int main()
 {
     int a, b, c, d, e, mult, n;
 
-    n = 15;
+    n = 4;
     if (n >= 0 && n < 15)
     {
         for (a = 0; a <= n; a++)
