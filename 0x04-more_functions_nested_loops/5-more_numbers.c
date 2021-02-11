@@ -13,7 +13,7 @@ void more_numbers(void)
 	int last_digit;
 	int cycles;
 
-	for (cycles = 0; cycles <= 10; cycles++)
+	for (cycles = 0; cycles < 10; cycles++)
 	{
 		for (numbers = 0; numbers <= 14; numbers++)
 		{
