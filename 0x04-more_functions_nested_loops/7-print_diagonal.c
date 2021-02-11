@@ -26,12 +26,12 @@ void print_diagonal(int n)
 					_putchar(' ');
 				}
 			}
-			else if (a < 1)
-			{
-				_putchar('\n');
-			}
 			_putchar(92);
 			_putchar('\n');
 		}
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
