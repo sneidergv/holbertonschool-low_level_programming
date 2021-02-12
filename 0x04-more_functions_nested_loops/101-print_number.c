@@ -13,17 +13,16 @@ void print_number(int n)
 	int mil, cen, dec, uni;
 
 	/*Convertir n a positivo sí es negativo*/
-	mil = n / 1000;
-	cen = (n / 100) % 10;
-	dec = (n / 10) % 10;
-	uni = n % 10;
-
 	if (n < 0)
 	{
 		n *= -1;
 		_putchar('-');
-		mil *= -1; cen *= -1; dec *= -1; uni *= -1;
 	}
+
+	mil = n / 1000;
+	cen = (n / 100) % 10;
+	dec = (n / 10) % 10;
+	uni = n % 10;
 
 	/* Sí n tiene 1 dígito.*/
 	if ((n >= 0) && (n < 10))
