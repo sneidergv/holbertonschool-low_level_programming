@@ -8,28 +8,24 @@
 
 int main(void)
 {
-	int first_digit, second_digit, third_digit, fourth_digit;
+	int firts_number, second_number;
 
-	for (first_digit = 0; first_digit <= 9; first_digit++)
+	for (firts_number = 0; firts_number <= 98; firts_number++)
 	{
-		for (second_digit = 0; second_digit <= 9; second_digit++)
+		for (second_number = (firts_number + 1); second_number <= 99;
+		second_number++)
 		{
-			for (third_digit = first_digit; third_digit <= 9; third_digit++)
+			putchar((firts_number / 10) + '0');
+			putchar((firts_number % 10) + '0');
+			putchar(' ');
+			putchar((second_number / 10) + '0');
+			putchar((second_number % 10) + '0');
+			if (firts_number == 98 && second_number == 99)
 			{
-				for (fourth_digit = (second_digit + 1); fourth_digit <= 9; fourth_digit++)
-				{
-					putchar(first_digit + '0');
-					putchar(second_digit + '0');
-					putchar(' ');
-					putchar(third_digit + '0');
-					putchar(fourth_digit + '0');
-					if (first_digit == 9 && second_digit == 8 &&
-					third_digit == 9 && fourth_digit == 9)
-						break;
-					putchar(',');
-					putchar(' ');
-				}
+				break;
 			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 }
