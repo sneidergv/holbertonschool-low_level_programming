@@ -13,19 +13,20 @@ void rev_string(char *s)
 	int i = 0;
 	int j = 0;
 
-	char tmp[1000];
+	char tmp[12];
 
 	while (*(s + i))
 	{
-		*(tmp + i) = *(s + i);
+		*(tmp + i) = *(s + i); //tmp[Holberton]
 		i++;
 	}
 
-	i -= 1;
+	i -= 1; //'\0' i = 9
 
 	while (i >= 0)
 	{
-		*(s + i) = *(tmp + j);
+		*(s + i) = *(tmp + j); // i = 9
+
 		j++;
 		i--;
 	}
