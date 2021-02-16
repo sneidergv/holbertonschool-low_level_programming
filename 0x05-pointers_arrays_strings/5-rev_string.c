@@ -17,15 +17,15 @@ void rev_string(char *s)
 
 	while (*(s + i))
 	{
-		*(tmp + i) = *(s + i); //tmp[Holberton]
+		*(tmp + i) = *(s + i);
 		i++;
 	}
 
-	i -= 1; //'\0' i = 9
+	i -= 1;
 
 	while (i >= 0)
 	{
-		*(s + i) = *(tmp + j); // i = 9
+		*(s + i) = *(tmp + j);
 
 		j++;
 		i--;
