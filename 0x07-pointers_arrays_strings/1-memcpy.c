@@ -7,6 +7,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	while (index < n)
 	{
 		*(dest + index) = *(src + index);
+		index++;
 	}
 	return (dest);
 }
