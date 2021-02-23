@@ -4,10 +4,9 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int index = 0;
 
-	while (index < n)
+	for (index = 0; index < n; index++)
 	{
 		*(dest + index) = *(src + index);
-		index++;
 	}
 	return (dest);
 }
