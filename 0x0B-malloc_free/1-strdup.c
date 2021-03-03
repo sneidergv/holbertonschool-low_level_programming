@@ -9,22 +9,20 @@
 
 char *_strdup(char *str)
 {
-	int length = 0;
-	int index;
+	int length, index;
 	char *nArray;
 
 	if (str == NULL)
 		return (NULL);
 
-
-	while (str[length])
-		length++;
+	for (length = 0; str[length]; length++)
+		;
+	length++;
 
 	nArray = malloc(length * sizeof(char));
 
 	if (nArray == NULL)
 		return (NULL);
-
 
 	for (index = 0; index < length; index++)
 	{
