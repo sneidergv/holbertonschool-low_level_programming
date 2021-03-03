@@ -11,7 +11,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int lenght_s1, lenght_s2;
+	int lenght_s1, lenght_s2, index_1, index_2;
 	char *nArray;
 
 	if (s1 == NULL)
@@ -30,8 +30,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-
-	int index_1, index_2;
 
 	for (index_1 = 0; index_1 < lenght_s1; index_1++)
 	{
