@@ -47,5 +47,8 @@ char *str_concat(char *s1, char *s2)
 		nArray[index_1] = s2[index_2];
 		index_1++;
 	}
+
+	nArray[index_1] = '\0';
+
 	return (nArray);
 }
