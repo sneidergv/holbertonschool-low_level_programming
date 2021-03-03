@@ -11,7 +11,11 @@
 
 char *_strdup(char *str)
 {
+	if (str == NULL)
+		return (NULL);
+
 	int length = 0;
+	int index;
 	char *nArray;
 
 	while (str[length])
@@ -22,7 +26,6 @@ char *_strdup(char *str)
 	if (nArray == NULL)
 		return (NULL);
 
-	int index;
 
 	for (index = 0; index < length; index++)
 	{
