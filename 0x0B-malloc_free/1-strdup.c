@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
 * _strdup - function that returns a pointer.
@@ -13,7 +14,9 @@ char *_strdup(char *str)
 	char *nArray;
 
 	if (str == NULL)
+	{
 		return (NULL);
+	}
 
 	for (length = 0; str[length]; length++)
 		;
@@ -22,7 +25,9 @@ char *_strdup(char *str)
 	nArray = malloc(length * sizeof(char));
 
 	if (nArray == NULL)
+	{
 		return (NULL);
+	}
 
 	for (index = 0; index < length; index++)
 	{
