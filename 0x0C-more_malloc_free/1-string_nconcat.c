@@ -27,8 +27,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[lenght_s2])
 		lenght_s2++;
 
-	if (n <= lenght_s2)
-		lenght_s2 = n;
+	if (n >= lenght_s2)
+		n = lenght_s2;
 
 	lenght_nA = (lenght_s1 + n) + 1;
 
@@ -46,9 +46,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		index_1++;
 	}
 
-	lenght_nA++;
-
-	nArray[lenght_nA] = '\0';
+	nArray[lenght_nA - 1] = '\0';
 
 	return (nArray);
 }
