@@ -36,7 +36,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	nArray = malloc(lenght_nA * (sizeof(char)));
 
 	if (nArray == NULL)
+	{
 		return (NULL);
+	}
 
 	for (index_1 = 0; s1[index_1]; index_1++)
 		nArray[index_1] = s1[index_1];
@@ -46,6 +48,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		nArray[index_1] = s2[index_2];
 		index_1++;
 	}
+
+	nArray[lenght_nA] = '\0';
 
 	return (nArray);
 }
