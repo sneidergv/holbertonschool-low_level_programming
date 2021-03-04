@@ -49,6 +49,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		index_1++;
 	}
 
+	lenght_nA++;
+
 	nArray[lenght_nA] = '\0';
 
 	return (nArray);
