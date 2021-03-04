@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[lenght_s2])
 		lenght_s2++;
 
-	if (n > lenght_s2)
+	if (n >= lenght_s2)
 		n = lenght_s2;
 
 	lenght_nA = (lenght_s1 + n) + 1;
