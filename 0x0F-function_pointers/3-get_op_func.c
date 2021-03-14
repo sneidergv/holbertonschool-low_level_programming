@@ -4,8 +4,6 @@
 * get_op_func - selects the correct function to
 * perform the operation asked by the user.
 * @s: Operator input by the user.
-* @a: First number.
-* @b: Second number.
 * Return: The function matched with the user input.
 */
 
@@ -21,7 +19,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i;
 
-	for(i = 0; ops[i].op != NULL; i++)
+	for (i = 0; ops[i].op != NULL; i++)
 	{
 		if (strcmp(s, ops[i].op) == 0)
 			break;
