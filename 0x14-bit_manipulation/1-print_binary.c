@@ -16,7 +16,6 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 		return;
 	}
-	/* Size of an integer is assumed to be 32 bits */
 	for (int i = 31; i >= 0; i--)
 	{
 		k = n >> i;
