@@ -18,7 +18,7 @@ void main(int argc, char *argv)
 		dprintf(STDERR_FILENO, "Error: Can't close from file %s", argv[1]);
 		exit (98);
 	}
-	if (argv[2] == NULL)
+	if (argv[2])
 	{
 		fd2 = open(argv[2], O_CREAT | O_WRONLY, 0664);
 	}
