@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
  * free_dlistint - free linkedlist.
  * @head: pointer to head.
  * Return: void.
@@ -8,12 +8,12 @@
 
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *freezer;
+	dlistint_t *tmp;
 
 	while (head)
 	{
-		freezer = head->next;
+		tmp = head->next;
 		free(head);
-		head = freezer;
+		head = tmp;
 	}
 }
