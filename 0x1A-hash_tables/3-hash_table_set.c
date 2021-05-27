@@ -2,7 +2,24 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	return (1);
+	hash_node_t *tmp, *node;
+	unsigned long int index;
+	index = key_index((const unsigned char *)key, ht->size);
+	tmp = ht->array[index];
+
+	node = new_node(key, value);
+	if (!node)
+		return (0);
+
+	if (!tmp)
+	{
+		node->next = ht->array[index];
+		ht->array[index] = node;
+		return (1);
+	}
+
+	
+	return (0);
 }
 
 hash_node_t *new_node(const char *key, const char *value)
