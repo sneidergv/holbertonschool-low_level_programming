@@ -2,7 +2,7 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-
+	return (1);
 }
 
 hash_node_t *new_node(const char *key, const char *value)
@@ -15,10 +15,22 @@ hash_node_t *new_node(const char *key, const char *value)
 	if (!node)
 		return (NULL);
 
-	node->key = key;
+	node->key = strdup(key);
 	if (!node->key)
 	{
 		free(node);
 		return (NULL);
 	}
+
+	node->value = strdup(value);
+	if (!node->value)
+	{
+		free(node->key);
+		free(node);
+		return (NULL);
+	}
+
+	node->next = NULL;
+
+	return (node);
 }
