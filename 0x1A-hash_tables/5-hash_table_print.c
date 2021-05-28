@@ -8,7 +8,7 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *walker;
+	hash_node_t *walker = NULL;
 	unsigned long int i;
 	int status = 0;
 
