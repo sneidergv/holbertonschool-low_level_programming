@@ -12,6 +12,8 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i;
 	int status = 0;
 
+	if (!ht)
+		return (NULL);
 
 	printf("{");
 	for (i = 0; i < ht->size; i++)
