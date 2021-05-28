@@ -4,22 +4,32 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *tmp, *node;
 	unsigned long int index;
+	char *_value = strdup(value);
+	if (!_value)
+		return (0);
+
 	index = key_index((const unsigned char *)key, ht->size);
 	tmp = ht->array[index];
 
+	if (!node)
+		return (0);
+	while (tmp != NULL)
+	{
+		if (strcmp(tmp->key, key) == 0)
+		{
+			free(tmp->value);
+			tmp->value =_value;
+			return (1);
+		}
+		tmp = tmp->next;
+	}
 	node = new_node(key, value);
 	if (!node)
 		return (0);
+	node->next = ht->array[index];
+	ht->array[index] = node;
 
-	if (!tmp)
-	{
-		node->next = ht->array[index];
-		ht->array[index] = node;
-		return (1);
-	}
-
-	
-	return (0);
+	return (1);
 }
 
 hash_node_t *new_node(const char *key, const char *value)
