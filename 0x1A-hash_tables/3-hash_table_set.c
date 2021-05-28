@@ -39,6 +39,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 
+/**
+ * new_node - Create a new node.
+ * @key: key of the node.
+ * @value: value of the node.
+ * Return: pointer of the new node.
+ */
+
 hash_node_t *new_node(const char *key, const char *value)
 {
 	hash_node_t *node;
