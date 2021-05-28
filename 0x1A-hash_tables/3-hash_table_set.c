@@ -1,5 +1,13 @@
 #include "hash_tables.h"
 
+/**
+ * hash_table_set - function that adds an element to the hash table.
+ * @ht: pointer to hash table struct.
+ * @key: key of the node.
+ * @value: value of the node.
+ * Return: 1 on success or if it's fail.
+ */
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *tmp, *node;
