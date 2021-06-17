@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include <stdio.h>
 
 /**
  * main - print a string in stderr
@@ -7,7 +7,6 @@
 
 int main()
 {
-    char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-    write(STDERR_FILENO, str, 87);
+    printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
     return (1);
 }
