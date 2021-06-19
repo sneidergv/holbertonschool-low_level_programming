@@ -28,6 +28,7 @@ int main(void)
 
 	if (number > 2)
 		printf("%lu ", number);
+	printf("\n");
 
 	return (0);
 }
