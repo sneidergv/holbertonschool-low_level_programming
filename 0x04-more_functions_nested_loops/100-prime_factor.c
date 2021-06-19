@@ -13,7 +13,6 @@ int main(void)
 
 	while (number % 2 == 0)
 	{
-		printf("%d ", 2);
 		number = number / 2;
 	}
 
@@ -21,13 +20,12 @@ int main(void)
 	{
 		while (number % i == 0)
 		{
-			printf("%lu ", i);
 			number = number / i;
 		}
 	}
 
 	if (number > 2)
-		printf("%lu ", number);
+		printf("%lu", number);
 	printf("\n");
 
 	return (0);
