@@ -5,6 +5,7 @@
  *
  * Return: always 0
  */
+
 int main(void)
 {
 	long int a, b, c, d;
