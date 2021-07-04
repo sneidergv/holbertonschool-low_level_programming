@@ -4,3 +4,5 @@
 *.h
 clean
 holberton
+__pycache__
+*main.py
